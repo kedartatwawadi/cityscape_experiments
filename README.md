@@ -25,11 +25,13 @@ Sample ground truth:
 4. **Object Detection/Segmentation experiment**
 
 The raw results are in the logs folder. While all the scripts are in the main folder. 
+
 1. [logs](logs): contains logs
+2. [create_videos.sh](create_videos.sh): Script for creating videos from consecutive frames
+3. [retrieve_frames.sh](retrieve_frames.sh): Retrieve the 20th frame (and 19th frame) for experiments and comparison with ground truth
+4. [run_obj_detect.sh](run_obj_detect.sh): Run object detection experiment which compares the result with the GT. We use the the [LRR](https://github.com/golnazghiasi/LRR) (Laplacian Pyramid Reconstruction and Refinement for Semantic Segmentation) algorithm, one of the best amongst the benchmarks on the Cityscape datasets.
 
-
-
-### Cmopression vs distortion experiment
+### Compression vs distortion experiment
 
 ### Impact of denoising
 
