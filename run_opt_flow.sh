@@ -1,9 +1,9 @@
 #!/bin/bash
 
-base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_denoise_crf
-crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_denoise_crf0/optical_flow_frames
-log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_exp_x264_denoise_SF_crf
-code_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/opt_flow_ked_3.py
+base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf
+crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf0/optical_flow_frames
+log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_exp_x264_crf
+code_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/opt_flow_ked_2.py
 
 for crf in `seq 0 8 32`
 do

@@ -31,11 +31,46 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 3. [retrieve_frames.sh](retrieve_frames.sh): Retrieve the 20th frame (and 19th frame) for experiments and comparison with ground truth
 4. [run_obj_detect.sh](run_obj_detect.sh): Run object detection experiment which compares the result with the GT. We use the the [LRR](https://github.com/golnazghiasi/LRR) (Laplacian Pyramid Reconstruction and Refinement for Semantic Segmentation) algorithm, one of the best amongst the benchmarks on the Cityscape datasets.
 
-### Compression vs distortion experiment
+### Compression vs distortion experiment (Total memory for 50 videos together)
+x265 is approximately 1.5-2 times better than x264. VP9 experiments are incomplete as of now (will be done by tomorrow).
+However, x265,vp9 are an order of magnitude slower than x264.
+
+CRF| x264 |x265 | vp9
+--- | --- | --- | ---
+crf0| 44M | 26M | -
+crf8| 18M | 10M | -
+crf16| 5M | 3.5K | -
+crf24| 1.5M | 920K | -
+crf32| 480K | 400K | -
+
 
 ### Impact of denoising
+There is approximately 20-25% saving on denoising, with very less impact on algorithms.
+
+CRF| x264 |x264_denoise
+--- | --- | --- 
+crf0| 44M | 32M  
+crf8| 18M | 12M
+crf16| 5M | 3.8M
+crf24| 1.5M | 1.3M
+crf32| 480K |460K
 
 ### Optical Flow experiments
+For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the **Farneback's algorithm.**
+
+1. [Farneback's Algorithm](http://docs.opencv.org/2.4/modules/video/doc/motion_analysis_and_object_tracking.html): The results are for this algorithm (openCV implementation)
+2. [SimpleFlow](http://graphics.berkeley.edu/papers/Tao-SAN-2012-05/): For some frames (even lossless, gives incorrect flow (nan), and is probably unreliable
+3. [DeepFLow](http://thoth.inrialpes.fr/src/deepflow/): Was not able to run it on the machine. Some technical issues, ll check these
+
+CRF| x264 |denoise_x264
+--- | --- | ---
+crf0| 0 | 0 
+crf8| 0.038 | 0.040
+crf16| 0.081 | 0.080
+crf24| 0.185 | 0.16
+crf32| 0.31 | 0.28 
+
+Its ovserved that the specific hqdn3d denoiser does not result in significant gains (as compared with the experiments with Ford videos). Probably different denoiser might work. Also, the noise seems really low in the videos.
 
 ### Object Detection/Segmentation experiment
 
