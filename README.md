@@ -29,13 +29,15 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 
 
 
-#### Cmopression vs distortion experiment
+### Cmopression vs distortion experiment
 
-#### Impact of denoising
+### Impact of denoising
 
-#### Optical Flow experiments
+### Optical Flow experiments
 
-#### object Detection/Segmentation experiment
+### Object Detection/Segmentation experiment
+
+(Experiments with x264. Other vcodecs TBD)
 
 CRF|meanIU |pixelAcc | meanAcc
 --- | --- | --- | ---
@@ -44,3 +46,10 @@ crf8|70.86 | 94.97 | 81.70
 crf16| 70.32 | 94.69 | 81.27
 crf24| 62.17 | 90.66 | 77.79
 crf32| 47.50 | 79.23 | 67.53
+
+The relevant parameters are:
+
+1. **meanIU:** mean intersection-over-union metric [IoU](https://www.cityscapes-dataset.com/benchmarks/) 
+2. **pixelAcc:** Pixel Level Accuracy
+3. **meanAcc:** Average Accuracy (not exactly sure what this is)
+
