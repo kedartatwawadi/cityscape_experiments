@@ -12,6 +12,8 @@ Every 20th frame in the 30 frame have ground truth pixel-level object segmentati
 
 Sample (frame): 
 
+![Sample Frame](sample_data/frankfurt_000000_000293_leftImg8bit.png)
+
 Sample ground truth:
 
 ![Sample GT](sample_data/frankfurt_000000_000294_gtFine_color.png)
