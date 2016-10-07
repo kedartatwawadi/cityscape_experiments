@@ -36,6 +36,10 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 ### Impact of denoising
 
 ### Optical Flow experiments
+For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the Farneback's algorithm.
+
+1.  
+2. 
 
 ### Object Detection/Segmentation experiment
 
