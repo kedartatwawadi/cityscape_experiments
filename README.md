@@ -14,7 +14,7 @@ Sample (frame):
 
 Sample ground truth:
 
-![sample_data/frankfurt_000000_000294_gtFine_color.png](sample gt)
+![Sample GT](sample_data/frankfurt_000000_000294_gtFine_color.png)
 
 ## Experiments
 1. **Compression vs distortion experient**
