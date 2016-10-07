@@ -36,3 +36,10 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 #### Optical Flow experiments
 
 #### object Detection/Segmentation experiment
+
+CRF|meanIU |pixelAcc | meanAcc|
+crf0|71.27| 95.04 | 82.07 |
+crf8|70.86 | 94.97 | 81.70|
+crf16| 70.32 | 94.69 | 81.27
+crf24| 62.17 | 90.66 | 77.79|
+crf32| 47.50 | 79.23 | 67.53|
