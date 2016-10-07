@@ -11,5 +11,5 @@ rm -r frankfurt/
 for crf in `seq 0 8 32`
 do
     cp -r $base_dir$crf/frankfurt $val_dir
-    matlab -nodisplay -nodesktop -r "$code_path; quit" | tee -a $log_path$crf.txt 
+    matlab -nodisplay -nodesktop -r "run $code_path; quit" | tee -a $log_path$crf.txt 
 done

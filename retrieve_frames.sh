@@ -1,6 +1,6 @@
 #!/bin/bash
 
-vid_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf
+vid_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_denoise_crf
 offset=19
 extn="_leftImg8bit.png"
 
