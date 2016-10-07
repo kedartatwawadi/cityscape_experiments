@@ -25,7 +25,7 @@ frame1 = cv2.imread(sys.argv[1]);
 frame2 = cv2.imread(sys.argv[2]);
 frame1_crf0 = cv2.imread(sys.argv[3]);
 frame2_crf0 = cv2.imread(sys.argv[4]);
-logfile = open(sys.argv[5],'w');
+logfile = open(sys.argv[5],'a');
 
 gray1 = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
 gray2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
