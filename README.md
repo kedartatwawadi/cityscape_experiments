@@ -1,4 +1,4 @@
-# cityscape_experiments
+# Cityscape Experiments
 These are the results of the experiments with the cityscape dataset.
 
 The experiments were conducted with the frankfurt part of the cityscape dataset.
@@ -10,6 +10,9 @@ This part of the dataset was used mainly for compression experiments, as ground 
 Every 20th frame in the 30 frame have ground truth pixel-level object segmentation information 
 (both object type and class information).
 
+Sample Data: 
+
+
 ## Experiments
 1. **Compression vs distortion experient**
 2. **Impact of denoising**
@@ -17,8 +20,9 @@ Every 20th frame in the 30 frame have ground truth pixel-level object segmentati
 4. **Object Detection/Segmentation experiment**
 
 The raw results are in the logs folder. While all the scripts are in the main folder. 
-1. [logs]: contains logs
-2. [
+1. [logs](logs): contains logs
+
+
 
 #### Cmopression vs distortion experiment
 
