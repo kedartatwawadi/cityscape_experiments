@@ -10,8 +10,11 @@ This part of the dataset was used mainly for compression experiments, as ground 
 Every 20th frame in the 30 frame have ground truth pixel-level object segmentation information 
 (both object type and class information).
 
-Sample Data: 
+Sample (frame): 
 
+Sample ground truth:
+
+[sample_data/frankfurt_000000_000294_gtFine_color.png](sample gt)
 
 ## Experiments
 1. **Compression vs distortion experient**
