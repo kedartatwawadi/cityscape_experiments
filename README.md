@@ -35,6 +35,7 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 x265 is approximately 1.5-2 times better than x264. 
 However, x265,vp9 are an order of magnitude slower than x264.
 (Having some issues with vp9. Will try to sort them out over the weekend)
+These results are for 30 frame snippets (average over 50 snippets)
 
 CRF| x264 |x265 | vp9
 --- | --- | --- | ---
@@ -44,7 +45,17 @@ crf16| 5M | 3.5K | -
 crf24| 1.5M | 920K | -
 crf32| 480K | 400K | -
 
+#### Compression experiment for longer duration videos 
+These experiments are for 5min video blocks (5100 frames at 17fps)
+CRF| x264 
+--- | ---  
+crf0| 7.2GB 
+crf8| 2.35GB 
+crf16| 560MB
+crf24| 150MB 
+crf32| 50MB
 
+(per frame wise: This is better than 30 frame compression by: 20-25%)
 ### Impact of denoising
 There is approximately 20-25% saving on denoising, with very less impact on algorithms.
 
