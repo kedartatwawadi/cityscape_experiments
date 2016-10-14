@@ -32,8 +32,9 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 4. [run_obj_detect.sh](run_obj_detect.sh): Run object detection experiment which compares the result with the GT. We use the the [LRR](https://github.com/golnazghiasi/LRR) (Laplacian Pyramid Reconstruction and Refinement for Semantic Segmentation) algorithm, one of the best amongst the benchmarks on the Cityscape datasets.
 
 ### Compression vs distortion experiment (Total memory for 50 videos together)
-x265 is approximately 1.5-2 times better than x264. VP9 experiments are incomplete as of now (will be done by tomorrow).
+x265 is approximately 1.5-2 times better than x264. 
 However, x265,vp9 are an order of magnitude slower than x264.
+(Having some issues with vp9. Will try to sort them out over the weekend)
 
 CRF| x264 |x265 | vp9
 --- | --- | --- | ---
