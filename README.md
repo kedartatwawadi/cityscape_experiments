@@ -47,6 +47,7 @@ crf32| 480K | 400K | -
 
 #### Compression experiment for longer duration videos 
 These experiments are for 5min video blocks (5100 frames at 17fps)
+
 CRF| x264 
 --- | ---  
 crf0| 7.2GB 
