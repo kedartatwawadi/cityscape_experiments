@@ -1,0 +1,4 @@
+frankfurt_000000_000293_leftImg8bit.png    0.0
+frankfurt_000000_000575_leftImg8bit.png    0.0
+frankfurt_000000_001015_leftImg8bit.png    0.0
+frankfurt_000000_001235_leftImg8bit.png    0.0
