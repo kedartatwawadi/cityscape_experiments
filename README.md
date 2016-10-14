@@ -64,10 +64,10 @@ For fair comparison, we only consider dense optical flow algorithms (as it is un
 CRF| x264 |denoise_x264
 --- | --- | ---
 crf0| 0 | 0 
-crf8| 0.038 | 0.040
-crf16| 0.081 | 0.080
-crf24| 0.185 | 0.16
-crf32| 0.31 | 0.28
+crf8| 0.027 | -
+crf16| 0.056 | -
+crf24| 0.123 | -
+crf32| 0.28 | -
 
 Its observed that the specific hqdn3d denoiser does not result in significant gains (as compared with the experiments with Ford videos). Probably different denoiser might work. Also, the noise seems really low in the videos
 
