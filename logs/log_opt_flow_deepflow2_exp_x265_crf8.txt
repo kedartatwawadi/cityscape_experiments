@@ -27,3 +27,5 @@ frankfurt_000000_011460_leftImg8bit.png    0.0139517
 frankfurt_000000_011809_leftImg8bit.png    0.0248563
 frankfurt_000000_012008_leftImg8bit.png    0.0343749
 frankfurt_000000_012120_leftImg8bit.png    0.0220202
+frankfurt_000000_012867_leftImg8bit.png    0.0216034
+frankfurt_000000_013066_leftImg8bit.png    0.0216351
