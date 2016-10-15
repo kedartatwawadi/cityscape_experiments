@@ -40,3 +40,10 @@ frankfurt_000000_016285_leftImg8bit.png    0.0234568
 frankfurt_000000_017227_leftImg8bit.png    0.0143585
 frankfurt_000000_017475_leftImg8bit.png    0.0179176
 frankfurt_000000_018796_leftImg8bit.png    0.0140619
+frankfurt_000000_019606_leftImg8bit.png    0.0140803
+frankfurt_000000_020214_leftImg8bit.png    0.0200885
+frankfurt_000000_020320_leftImg8bit.png    0.0156336
+frankfurt_000000_020879_leftImg8bit.png    0.0259807
+frankfurt_000000_021666_leftImg8bit.png    0.0100208
+frankfurt_000000_021878_leftImg8bit.png    0.0268364
+frankfurt_000000_022253_leftImg8bit.png    0.0149542

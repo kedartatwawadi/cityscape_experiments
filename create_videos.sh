@@ -14,7 +14,7 @@ do
     echo $start_frame_name
     start_frame_num=$(echo $start_frame_name | sed 's/^frankfurt_000000_\([0-9]*\)_leftImg8bit.png$/\1/')
     echo $start_frame_num
-    for crf in `seq 0 8 24`
+    for crf in 32
     do  
         mkdir -p $write_dir$crf
         ffmpeg -r 17 -start_number $start_frame_num -i frankfurt_000000_%06d_leftImg8bit.png -vframes 30 -vcodec libx265 -crf $crf -pix_fmt yuv444p $write_dir$crf/frankfurt_000000_$start_frame_num.mp4   
