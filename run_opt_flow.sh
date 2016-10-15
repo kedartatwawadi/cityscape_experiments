@@ -1,11 +1,11 @@
 #!/bin/bash
 
-base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf
-crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf0/optical_flow_frames
-log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_exp_x264_crf
+base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf
+crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf0/optical_flow_frames
+log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_exp_x265_crf
 code_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/opt_flow_ked_2.py
 
-for crf in `seq 0 8 32`
+for crf in 16 24
 do
     cd $base_dir$crf/optical_flow_frames
     files=(*.png)

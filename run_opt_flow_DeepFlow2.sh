@@ -1,16 +1,16 @@
 #!/bin/bash
 
-base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf
-crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_crf0/optical_flow_frames
-log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_deepflow2_exp_x264_crf
+base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf
+crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf0/optical_flow_frames
+log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_deepflow2_exp_x265_crf
 opt_flow_code_path=/home/kedar/code/video_compression/DeepFlow_release2.0/deepflow2
 code_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/compare_flow.py
 
-for crf in `seq 8 8 32`
+for crf in 2 4 6 8 16 24
 do
     cd $base_dir$crf/optical_flow_frames
     files=(*.png)
-    for iter in `seq 0 2 99`
+    for iter in `seq 0 2 97`
     do
 	rm flow.flo flow_crf0.flo
         f1=${files[iter]}

@@ -1,0 +1,15 @@
+frankfurt_000000_014480_leftImg8bit.png    0.184026
+frankfurt_000000_015676_leftImg8bit.png    0.162815
+frankfurt_000000_017228_leftImg8bit.png    0.217915
+frankfurt_000000_018797_leftImg8bit.png    0.171445
+frankfurt_000000_020215_leftImg8bit.png    0.200057
+frankfurt_000000_014480_leftImg8bit.png    0.184026
+frankfurt_000000_015676_leftImg8bit.png    0.162815
+frankfurt_000000_017228_leftImg8bit.png    0.217915
+frankfurt_000000_018797_leftImg8bit.png    0.171445
+frankfurt_000000_020215_leftImg8bit.png    0.200057
+frankfurt_000000_014480_leftImg8bit.png    0.184026
+frankfurt_000000_015676_leftImg8bit.png    0.162815
+frankfurt_000000_017228_leftImg8bit.png    0.217915
+frankfurt_000000_018797_leftImg8bit.png    0.171445
+frankfurt_000000_020215_leftImg8bit.png    0.200057
