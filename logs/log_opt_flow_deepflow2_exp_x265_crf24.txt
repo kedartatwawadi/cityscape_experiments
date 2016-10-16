@@ -1,0 +1,5 @@
+frankfurt_000000_014480_leftImg8bit.png    0.11665
+frankfurt_000000_015676_leftImg8bit.png    0.103777
+frankfurt_000000_017228_leftImg8bit.png    0.0927915
+frankfurt_000000_018797_leftImg8bit.png    0.0522047
+frankfurt_000000_020215_leftImg8bit.png    0.0712869
