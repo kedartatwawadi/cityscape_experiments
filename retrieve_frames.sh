@@ -1,10 +1,10 @@
 #!/bin/bash
 
-vid_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_denoise_crf
+vid_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf
 offset=19
 extn="_leftImg8bit.png"
 
-for crf in `seq 0 8 32`
+for crf in 0 2 4 6 8 16 24 32
 do
     cd $vid_dir$crf
     files=(*.mp4)
