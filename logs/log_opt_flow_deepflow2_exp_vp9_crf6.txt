@@ -1,1 +1,2 @@
 frankfurt_000000_020214_leftImg8bit.png    0.0374167
+frankfurt_000000_020320_leftImg8bit.png    0.0272272
