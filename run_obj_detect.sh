@@ -1,9 +1,9 @@
 #!/bin/bash
 
 val_dir=~/Videos/leftImg8bit/val
-base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x264_denoise_crf
+base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/temp_folder_x265/x265_crf
 code_path=/home/kedartatwawadi/code/video_compression/LRR/LRRTestOnCityScape.m
-log_path=/home/kedartatwawadi/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_obj_detect_exp_x264_denoise_crf
+log_path=/home/kedartatwawadi/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_obj_detect_exp_x265_crf
 
 cd $val_dir
 rm -r frankfurt/
