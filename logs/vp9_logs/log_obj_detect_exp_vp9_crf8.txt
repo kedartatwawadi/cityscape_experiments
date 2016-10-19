@@ -1,0 +1,76 @@
+[?1h=
+                                       < M A T L A B (R) >
+                             Copyright 1984-2016 The MathWorks, Inc.
+                             R2016a (9.0.0.341360) 64-bit (glnxa64)
+                                        February 11, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+path to matconvnet library: ../matconvnet-1.0-beta22/
+Number of validation data: 50
+[Warning: DotProduct layer: the dimensions of the input variables is not the same.] 
+[> In DotProduct/getOutputSizes (line 33)
+  In dagnn.DagNN/getVarSizes (line 38)
+  In dagnn.DagNN/print (line 76)
+  In model2dot (line 58)
+  In LRRTestOnCityScape (line 48)
+  In run (line 96)] 
+[Warning: Sum layer: the dimensions of the input variables is not the same.] 
+[> In dagnn.Sum/getOutputSizes (line 31)
+  In dagnn.DagNN/getVarSizes (line 38)
+  In dagnn.DagNN/print (line 76)
+  In model2dot (line 58)
+  In LRRTestOnCityScape (line 48)
+  In run (line 96)] 
+[Warning: DotProduct layer: the dimensions of the input variables is not the same.] 
+[> In DotProduct/getOutputSizes (line 33)
+  In dagnn.DagNN/getVarSizes (line 38)
+  In dagnn.DagNN/print (line 76)
+  In model2dot (line 58)
+  In LRRTestOnCityScape (line 48)
+  In run (line 96)] 
+[Warning: Sum layer: the dimensions of the input variables is not the same.] 
+[> In dagnn.Sum/getOutputSizes (line 31)
+  In dagnn.DagNN/getVarSizes (line 38)
+  In dagnn.DagNN/print (line 76)
+  In model2dot (line 58)
+  In LRRTestOnCityScape (line 48)
+  In run (line 96)] 
+[Warning: DotProduct layer: the dimensions of the input variables is not the same.] 
+[> In DotProduct/getOutputSizes (line 33)
+  In dagnn.DagNN/getVarSizes (line 38)
+  In dagnn.DagNN/print (line 76)
+  In model2dot (line 58)
+  In LRRTestOnCityScape (line 48)
+  In run (line 96)] 
+[Warning: Sum layer: the dimensions of the input variables is not the same.] 
+[> In dagnn.Sum/getOutputSizes (line 31)
+  In dagnn.DagNN/getVarSizes (line 38)
+  In dagnn.DagNN/print (line 76)
+  In model2dot (line 58)
+  In LRRTestOnCityScape (line 48)
+  In run (line 96)] 
+Model exported to models/LRR4x-VGG16-CityScapes-coarse-and-fine/model-vis.dot.
+[?1h=visualization of the model saved to models/LRR4x-VGG16-CityScapes-coarse-and-fine/model-vis.png
+1/50	2/50	3/50	4/50	5/50	6/50	7/50	8/50	9/50	10/50	11/50	12/50	13/50	14/50	15/50	16/50	17/50	18/50	19/50	20/50	21/50	22/50	23/50	24/50	25/50	26/50	27/50	28/50	29/50	30/50	31/50	32/50	33/50	34/50	35/50	36/50	37/50	38/50	39/50	40/50	41/50	42/50	43/50	44/50	45/50	46/50	47/50	48/50	49/50	50/50	-----------------------------------------------------------
+32x
+94.2 69.7 85.6 29.8 52.3 44.3 45.1 60.8 87.1 51.5 89.5 59.4 41.1 83.4 48.6 60.1 57.0 50.6 60.3 
+ meanIU: 61.61 pixelAcc: 91.73, meanAcc: 75.22
+-----------------------------------------------------------
+16x
+94.4 71.0 86.8 31.5 52.7 50.4 52.1 66.9 88.4 52.0 90.9 64.8 45.1 84.8 49.6 60.2 60.2 53.7 62.9 
+ meanIU: 64.13 pixelAcc: 92.36, meanAcc: 77.56
+-----------------------------------------------------------
+8x
+94.6 72.5 87.8 32.4 53.6 57.8 57.7 73.1 89.6 53.2 92.5 69.0 48.5 86.1 49.8 62.0 61.9 57.0 67.8 
+ meanIU: 66.68 pixelAcc: 93.01, meanAcc: 79.47
+-----------------------------------------------------------
+4x
+94.7 73.1 88.1 32.9 53.5 61.0 58.5 74.5 90.0 53.4 93.0 70.0 49.2 86.5 49.7 62.4 62.0 57.8 69.0 
+ meanIU: 67.34 pixelAcc: 93.21, meanAcc: 80.09
+[?1l>
