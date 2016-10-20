@@ -1,13 +1,14 @@
 #!/bin/bash
 
+source config.ini
 #base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf
 #crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf0/optical_flow_frames
-base_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/vp9_crf
-crf0_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/vp9_crf0/optical_flow_frames
-log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_exp_vp9_crf
+base_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/"$codec"_crf
+crf0_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/"$codec"_crf0/optical_flow_frames
+log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/"$codec"_logs/log_opt_flow_exp_"$codec"_crf
 code_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/opt_flow_ked_2.py
 
-for crf in 0 2 4 6 8 16 24 32
+for crf in $crf_list
 do
     cd $base_dir$crf/optical_flow_frames/
     files=(*.png)

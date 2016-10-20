@@ -1,15 +1,16 @@
 #!/bin/bash
 
+source config.ini
 #base_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf
 #crf0_dir=~/Videos/leftImg8bit_sequence/frankfurt_videos/x265_crf0/optical_flow_frames
-base_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/vp9_crf
-crf0_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/vp9_crf0/optical_flow_frames
+base_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/"$codec"_crf
+crf0_dir=/media/kedar/cfc96f03-783a-4353-be5f-c72a490aa372/kedar/frankfurt_videos/"$codec"_crf0/optical_flow_frames
 
-log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_opt_flow_deepflow2_exp_vp9_crf
+log_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/logs/"$codec"_logs/log_opt_flow_deepflow2_exp_"$codec"_crf
 opt_flow_code_path=/home/kedar/code/video_compression/DeepFlow_release2.0/deepflow2
 code_path=~/Videos/leftImg8bit_sequence/cityscape_experiments/compare_flow.py
 
-for crf in 2 4 6 8 16 24
+for crf in $crf_list
 do
     cd $base_dir$crf/optical_flow_frames
     files=(*.png)

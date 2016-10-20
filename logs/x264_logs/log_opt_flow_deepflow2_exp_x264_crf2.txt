@@ -1,0 +1,2 @@
+frankfurt_000000_000293_leftImg8bit.png    0.0118563
+frankfurt_000000_000575_leftImg8bit.png    0.00988642
