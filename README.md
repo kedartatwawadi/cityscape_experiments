@@ -39,11 +39,14 @@ These results are for 30 frame snippets (average over 50 snippets)
 
 CRF| x264 |x265 | vp9
 --- | --- | --- | ---
-crf0| 44M | 26M | -
-crf8| 18M | 10M | -
-crf16| 5M | 3.5K | -
-crf24| 1.5M | 920K | -
-crf32| 480K | 400K | -
+crf0| 44M | 26M | 49M
+crf2| 44M | 26M | 49M
+crf4| 44M | 26M | 49M
+crf6| 44M | 26M | 49M
+crf8| 18M | 10M | 7M
+crf16| 5M | 3.5M | 4M
+crf24| 1.5M | 920K | 
+crf32| 480K | 400K | 
 
 #### Compression experiment for longer duration videos 
 These experiments are for 5min video blocks (5100 frames at 17fps)
