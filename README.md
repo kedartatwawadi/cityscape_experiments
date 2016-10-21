@@ -125,6 +125,7 @@ crf24| 60.79 | 90.64 | 74.39
 #####VP9
 The relevant parameters are:
 
+
 1. **meanIU:** mean intersection-over-union metric [IoU](https://www.cityscapes-dataset.com/benchmarks/) 
 2. **pixelAcc:** Pixel Level Accuracy
 3. **meanAcc:** Average Accuracy 
@@ -163,3 +164,5 @@ crf32| 0.28 | -
 
 
 ### TODO
+1. CRF0 obj detection check
+2. multipass ffmpeg compression
