@@ -84,6 +84,18 @@ crf8| 2.35GB | 2.1GB
 crf16| 560MB | 341MB
 crf24| 150MB | 95MB
 
+
+### CRF0 Difference Analysis
+During the last discussion, we noticed that x265 CRF0 results were different that x264. I checked into this issue, and seems the difference is with respect to x265 codec usage. For almost all other codecs: x264,vp9,vp8,ffv1 etc. "-crf 0 or -qp 0" denotes perfectly lossless over the YUV space. For x265, it still performs transform coding, and then is lossless after that for "-crf 0". I switched off the transform coding and performed the experiments again, and the results are the same as x264, vp9. To be sue, I also used framehash, to compare hash values for each and every frame fro all the three codecs, and the hash values are exactly the same.
+The log files for the hash values can be accessed here: (these are for the first video only)
+
+1. [default_hash](logs/lossless_hash/default_hash.txt): The hash for the original png frames converted to YUV444 format
+2. [x264_hash](logs/lossless_hash/x264_framehash.txt): x264 hash 
+3. [x265_hash](logs/lossless_hash/x265_framehash.txt): x265 hash
+4. [vp9_hash](logs/lossless_hash/vp9_framehash.txt): vp9 hash
+
+Note that although these are perfectly the same after conversion to YUV444, there is still some loss in conversion from rGB (in which the original frames are provided) to YUV444. I also checked for the amount of loss this incurs, and this is about 0.2% RMSE error.
+
 ### Optical Flow experiments
 For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the **Farneback's algorithm.**
 
