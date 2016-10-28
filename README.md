@@ -62,6 +62,26 @@ crf24| 150MB
 
 (per frame wise: This is better than 30 frame compression by: 20-25%)
 
+#### Compression with presets:
+I used a veryslow preset to check what is the best quality achievable on x264. I ran this both on long as well as short videos.
+
+CRF| x264 |x264(veryslow preset)
+--- | --- | ---
+crf0| 44M | 43.6M 
+crf2| 31M | 28.8M
+crf4| 24M | 23.1M
+crf6| 19M | 17.7M
+crf8| 16M | 13.2M
+crf16| 5M | 3.36M
+crf24| 1.5M | 1M
+
+CRF| x264 | x264 (veryslow preset)
+--- | ---  | ---
+crf0| 7.2GB | 7.1GB
+crf8| 2.35GB | 2.1GB
+crf16| 560MB | 341MB
+crf24| 150MB | 
+
 ### Optical Flow experiments
 For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the **Farneback's algorithm.**
 
