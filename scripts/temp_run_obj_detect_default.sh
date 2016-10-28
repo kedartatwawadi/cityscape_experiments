@@ -2,9 +2,9 @@
 
 source config.ini
 val_dir=~/Videos/leftImg8bit/val
-base_dir=~/Videos/leftImg8bit_sequence/val/
+base_dir=~/Videos/
 code_path=/home/kedartatwawadi/code/video_compression/LRR/LRRTestOnCityScape.m
-log_path=/home/kedartatwawadi/Videos/leftImg8bit_sequence/cityscape_experiments/logs/default_obj_detect_lossless.txt
+log_path=/home/kedartatwawadi/Videos/leftImg8bit_sequence/cityscape_experiments/logs/log_x265_obj_detect_lossless.txt
 
 cd $val_dir
 rm -r frankfurt/
