@@ -42,7 +42,7 @@ These results are for 30 frame snippets (average over 50 snippets)
 
 CRF| x264 |x265 | vp9
 --- | --- | --- | ---
-crf0| 44M | 25M | 48M
+crf0| 44M | 53M | 48M
 crf2| 31M | 20M | 20M
 crf4| 24M | 16M | 12M
 crf6| 19M | 12M | 8.5M
