@@ -75,12 +75,14 @@ crf8| 16M | 13.2M
 crf16| 5M | 3.36M
 crf24| 1.5M | 1M
 
+For 5min videos, similar trend is observed (5100 frames).
+
 CRF| x264 | x264 (veryslow preset)
 --- | ---  | ---
 crf0| 7.2GB | 7.1GB
 crf8| 2.35GB | 2.1GB
 crf16| 560MB | 341MB
-crf24| 150MB | 
+crf24| 150MB | 95MB
 
 ### Optical Flow experiments
 For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the **Farneback's algorithm.**
