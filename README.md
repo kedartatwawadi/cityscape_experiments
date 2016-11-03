@@ -49,6 +49,7 @@ crf16| 5M | 2.5M | 3.1M
 crf24| 1.5M | 0.8M | 2.1M
 
 The speeds of compression are as follows:
+
 Speed |x264|x265|vp9
 ---|---|---|---
 in fps| 5.5 | 1.3 | 0.2
