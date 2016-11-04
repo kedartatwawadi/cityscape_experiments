@@ -35,10 +35,8 @@ The raw results are in the logs folder. While all the scripts are in the main fo
 
 
 ### Compression vs distortion experiment (Total memory for 50 videos together)
-x265 is approximately 1.5-2 times better than x264. 
-However, x265,vp9 are an order of magnitude slower than x264.
-(Having some issues with vp9. Will try to sort them out over the weekend)
 These results are for 30 frame snippets (average over 50 snippets)
+The original dataset is in the form of png images and has average size of 70MB.
 
 CRF| x264 |x265 | vp9
 --- | --- | --- | ---
@@ -49,6 +47,12 @@ crf6| 19M | 12M | 8.5M
 crf8| 16M | 9M | 6.2M
 crf16| 5M | 2.5M | 3.1M
 crf24| 1.5M | 0.8M | 2.1M
+
+The speeds of compression are as follows:
+
+Speed |x264|x265|vp9
+---|---|---|---
+in fps| 5.5 | 1.3 | 0.2
 
 #### Compression experiment for longer duration videos 
 These experiments are for 5min video blocks (5100 frames at 17fps)
