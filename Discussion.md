@@ -40,3 +40,6 @@ Also planning to test out the new NLMeans denoiser. However, which exact denoise
 
 As we observe, the difference becomes less pronounced as the CRF level increases. This is expected, considering lossy versions would try to remove unwanted noise first. But, CRF levels should not be direclty compared here, as they are relative to lossless version which would for sure be much better for the denoised video.
 
+## TODO
+1. Mosaiced file video size
+2. Difference of reconstructed mosaic video from demosaic
