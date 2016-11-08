@@ -22,12 +22,23 @@ The results are summarised below:
 
 ### File Size Experiment
 We experimented on 80 videos of approximate size of 650MB raw videos each. (Total 52GB).
+After demosaicing, we retain the frame size of 640x480 (which is one of the standard ways in which Bayer demosaicing is performed). Here, we are introducing more data, as now we have 3 channels instead of 1 greyscale channel.
+For most of the demosaicing experiments, it is possible to obtain the original video perfectly (upto loss in RGB -> YUV encoding).
+The average file sizes are shown below:
 
-After demosaicing (leading to some size reduction of 0.75 approximately), the average file sizes were:
 
-codec | raw | x264 | x265 | vp9
+ | raw | x264 | x265 | vp9
 --- | --- | --- | --- | ---
-size  | 650M | 42M   | 43M   | 43M
+mosaiced (original) | 650MB | 20MB | 20.5MB | 20MB 
+demosaiced  | --- | 42M   | 43M   | 43M
+
+Some observations:
+
+1. After compression, The demosaiced file sizes are larger because we are introducing some data due to interpolation. Although this is 3 times more information, it is observed that after compression it is more than the mosaiced dataset by a factor of 2. 
+Thus suggests that we can compress demosaiced data in a better way.
+2. The compression ratios are much better than the cityscape datascape numbers. 
+
+
 
 The file size logs are added to the logs/ford_logs/
 ### Denoise Experiment
