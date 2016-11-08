@@ -30,7 +30,7 @@ The average file sizes are shown below:
  | raw | x264 | x265 | vp9
 --- | --- | --- | --- | ---
 mosaiced (original) | 650MB | 20MB | 20.5MB | 20MB 
-demosaiced  | --- | 42M   | 43M   | 43M
+demosaiced  |  | 42M   | 43M   | 43M
 
 Some observations:
 
