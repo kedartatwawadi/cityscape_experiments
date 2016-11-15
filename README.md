@@ -146,6 +146,8 @@ The log files for the hash values can be accessed here: (these are for the first
 
 Note that although these are perfectly the same after conversion to YUV444, there is still some loss in conversion from rGB (in which the original frames are provided) to YUV444. I also checked for the amount of loss this incurs, and this is about 0.2% RMSE error.
 
+The relevant scripts are in: [scripts/analysis_scripts/](scripts/analysis_scripts).
+
 ### Optical Flow experiments
 For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the **Farneback's algorithm.**
 
