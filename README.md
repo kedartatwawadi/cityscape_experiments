@@ -54,6 +54,19 @@ Speed |x264|x265|vp9
 ---|---|---|---
 in fps| 5.5 | 1.3 | 0.2
 
+These are the commands which can be used to create compressed videos. (I used slightly different commands, as videos were being created from individual frames, but very similar)
+```bash
+ ## Lossless compression
+ #x264
+ ffmpeg -i $INPUT -c:v libx264 -crf 0 -pix_fmt yuv444p $OUTPUT
+ 
+ #x265
+ ffmpeg -i $INPUT -c:v libx265 -x265-params lossless=1  -pix_fmt yuv444p $OUTPUT
+ 
+ #vp9
+ ffmpeg -i $INPUT -c:v libvpx-vp9 -qmin 0 -qmax 0 -lossless 1 -pix_fmt yuv444p $OUTPUT
+```
+
 #### Compression experiment for longer duration videos 
 These experiments are for 5min video blocks (5100 frames at 17fps)
 
