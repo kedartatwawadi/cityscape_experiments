@@ -55,8 +55,13 @@ Speed |x264|x265|vp9
 in fps| 5.5 | 1.3 | 0.2
 
 These are the commands which can be used to create compressed videos. (I used slightly different commands, as videos were being created from individual frames, but very similar)
+
+1. **Lossless Compression**: Lossless compression commands (lossless in the YUV space) are slightly different for different codecs
 ```bash
  ## Lossless compression
+ INPUT=/path/to/input
+ OUTPUT=/path/to/output
+ 
  #x264
  ffmpeg -i $INPUT -c:v libx264 -crf 0 -pix_fmt yuv444p $OUTPUT
  
@@ -65,6 +70,23 @@ These are the commands which can be used to create compressed videos. (I used sl
  
  #vp9
  ffmpeg -i $INPUT -c:v libvpx-vp9 -qmin 0 -qmax 0 -lossless 1 -pix_fmt yuv444p $OUTPUT
+```
+
+2. **Lossy Compression**: The CRF level based compression commands are almost the same for all the codecs: 
+```bash
+ ## Lossy compression
+ INPUT=/path/to/input
+ OUTPUT=/path/to/output
+ CRF=4 #this is an example
+ 
+ #x264
+ ffmpeg -i $INPUT -c:v libx264 -crf $CRF -pix_fmt yuv444p $OUTPUT
+ 
+ #x265
+ ffmpeg -i $INPUT -c:v libx265 -crf $CRF  -pix_fmt yuv444p $OUTPUT
+ 
+ #vp9
+ ffmpeg -i $INPUT -c:v libvpx-vp9 -crf $CRF -pix_fmt yuv444p $OUTPUT
 ```
 
 #### Compression experiment for longer duration videos 
@@ -100,6 +122,17 @@ crf0| 7.2GB | 7.1GB
 crf8| 2.35GB | 2.1GB
 crf16| 560MB | 341MB
 crf24| 150MB | 95MB
+
+The command used for this can be obtained by applying an appropriate preset. An example for x264 is given below:
+```bash
+ ## compression with presets
+ INPUT=/path/to/input
+ OUTPUT=/path/to/output
+ CRF=4 #this is an example
+ 
+ #x264
+ ffmpeg -i $INPUT -c:v libx264 -preset veryslow -crf $CRF -pix_fmt yuv444p $OUTPUT
+ ```
 
 
 ### CRF0 Difference Analysis
