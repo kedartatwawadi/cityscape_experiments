@@ -57,7 +57,7 @@ in fps| 5.5 | 1.3 | 0.2
 These are the commands which can be used to create compressed videos. (I used slightly different commands, as videos were being created from individual frames, but very similar)
 
 1. **Lossless Compression**: Lossless compression commands (lossless in the YUV space) are slightly different for different codecs
-```sh
+```shell
  ## Lossless compression
  INPUT=/path/to/input
  OUTPUT=/path/to/output
