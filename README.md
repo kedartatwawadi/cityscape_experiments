@@ -146,7 +146,6 @@ The log files for the hash values can be accessed here: (these are for the first
 
 Note that although these are perfectly the same after conversion to YUV444, there is still some loss in conversion from rGB (in which the original frames are provided) to YUV444. I also checked for the amount of loss this incurs, and this is about 0.2% RMSE error.
 
-The relevant scripts are in: [scripts/analysis_scripts/](scripts/analysis_scripts).
 
 ### Optical Flow experiments
 For fair comparison, we only consider dense optical flow algorithms (as it is unclear how should we compare feature-based optical flow algorithms). Attempted the following Optical Flow algorithms. However, was able to successfully conduct the **Farneback's algorithm.**
@@ -163,6 +162,20 @@ crf8| 0.038 | 0.064 | 0.079
 crf16| 0.082 | 0.122 | 0.122
 crf24| 0.310 | 0.210 | 0.147
 
+The relevant scripts are in: [scripts/opt_flow_scripts/](scripts/opt_flow_scripts)
+```sh
+cd scripts/opt_flow_scripts
+
+## Extract frames from the videos
+# Extracts the 18th and 19th frames for every video (these will need modification for other settings)
+./get_frames_for_optflow.sh 
+
+## Compare optical flows for various videos:
+# This script uses the Farneback Optical flow algorithm implemented in opt_flow_ked_2.py 
+# & stores output in the mentioned log files
+./run_opt_flow.sh
+```
+
 2. [DeepFLow2](http://thoth.inrialpes.fr/src/deepflow/): The results are shown below:
 
 CRF| x264 |x265 | vp9
@@ -175,6 +188,18 @@ crf8| 0.027 | 0.040 | 0.053
 crf16| 0.056 | 0.071 | 0.752
 crf24| 0.12 | 0.132 | 0.090
 
+```sh
+cd scripts/opt_flow_scripts
+
+## Extract frames from the videos
+# Extracts the 18th and 19th frames for every video (these will need modification for other settings)
+./get_frames_for_optflow.sh 
+
+## Compare optical flows for various videos:
+# This script uses the Deepflow algorithm implemented in opt_flow_ked_3.py 
+# It uses compare_flow.py script to compare the flows wrt to the lossless
+./run_opt_flow_DeepFlow2.sh
+```
 
 4. [EpicFLow](http://thoth.inrialpes.fr/src/epicflow/): TBD
 3. [SimpleFlow](http://graphics.berkeley.edu/papers/Tao-SAN-2012-05/): For some frames (even lossless, gives incorrect flow (nan), and is probably unreliable
