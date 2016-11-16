@@ -244,13 +244,25 @@ crf8|67.34| 93.21| 80.09
 crf16|65.67| 93.21 | 80.09
 crf24| 63.95| 90.73 | 78.63
 
-
 The relevant parameters are:
-
 
 1. **meanIU:** mean intersection-over-union metric [IoU](https://www.cityscapes-dataset.com/benchmarks/) 
 2. **pixelAcc:** Pixel Level Accuracy
 3. **meanAcc:** Average Accuracy 
+
+The relevant scripts are in: [scripts/obj_detect_scripts/](scripts/obj_detect_scripts)
+```sh
+cd scripts/obj_detect_scripts
+
+## Extract frames from the videos
+# Extracts the 19th frames for every video (these will need modification for other settings)
+./retrieve_frames.sh 
+
+## Compare optical flows for various videos:
+# This script runs the MAtlab code for LRr object detection
+# & stores output in the mentioned log files
+./run_obj_detect.sh
+```
 
 ### Impact of denoising
 There is approximately 20-25% saving on denoising, with very less impact on algorithms.
@@ -282,8 +294,6 @@ crf8| 0.027 | -
 crf16| 0.056 | -
 crf24| 0.123 | -
 crf32| 0.28 | -
-
-
 
 ### TODO
 1. CRF0 obj detection check
