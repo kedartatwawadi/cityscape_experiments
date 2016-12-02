@@ -5,7 +5,7 @@ This is a summary of experiments on the google tensorflow image compressor. One 
 The Encoder processes blocks of 32x32 and performs "conceptual compression" of the block. Every block is compressed using the other neighboring blocks as priors, using the gated recurrent units (a slightly modified form of RNN). For speed They also add residual connections, but I dont think this makes mcuh of an impact on the understanding. But, probably allows deeper networks in practice. 
 
 Both the decoder and encoder networks are trained together (unlike autoencoders, they need not be the same). As described in the paer & the blog (https://research.googleblog.com/2016/09/image-compression-with-neural-networks.html):
-i
+
 1. The initial residual, R[0], corresponds to the original image I: R[0] = I.
 2. Set i=1 for to the first iteration.
 3. Iteration[i] takes R[i-1] as input and runs the encoder and binarizer to compress the image into B[i].
