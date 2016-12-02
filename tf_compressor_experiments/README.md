@@ -35,13 +35,20 @@ Performance:
 	  (https://ece.uwaterloo.ca/~z70wang/publications/msssim.html)
 
 We take a look at images for 5 iterations:
+(this remains fixed inspite of image size etc. for this network)
+| Iteration | BPP | Compression Ratio | msssim | 
+|---: |---: |---: | ---: | 
+|0 | 0.125 | 192:1| 0.88 | 
+|1 | 0.250 | 96:1| 0.95 | 
+|2 | 0.375 | 64:1| 0.97 | 
+|3 | 0.500 | 48:1| 0.98 | 
+|4 | 0.625 | 38.4:1| 0.984 | 
 
 ![image0](experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_00.png)
 ![image1](experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_01.png)
 ![image2](experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_02.png)
 ![image3](experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_03.png)
 ![image4](experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_04.png)
-
 
 ### Experiment 2
 This experiment was on the videos, by directly feeding in image samples. We use 5 iterations for simplicity right now (the computations are linear in number of iterations, and take a lot of time).
