@@ -45,7 +45,7 @@ We take a look at images for 5 iterations:
 |3 | 0.500 | 48:1| 0.98 | 
 |4 | 0.625 | 38.4:1| 0.984 | 
 
-Comparison with JPEG:
+Comparison with JPEG (every frame individually)
 
 | Iteration | Compression Ratio | msssim | 
 |---: |---: |---: | ---: | 
