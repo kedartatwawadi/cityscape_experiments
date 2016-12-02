@@ -36,6 +36,7 @@ Performance:
 
 We take a look at images for 5 iterations:
 (this remains fixed inspite of image size etc. for this network)
+
 | Iteration | BPP | Compression Ratio | msssim | 
 |---: |---: |---: | ---: | 
 |0 | 0.125 | 192:1| 0.88 | 
