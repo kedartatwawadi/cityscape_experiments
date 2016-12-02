@@ -65,7 +65,7 @@ Comparison with JPEG (every frame individually)
 This experiment was on the videos, by directly feeding in image samples. We use 5 iterations for simplicity right now (the computations are linear in number of iterations, and take a lot of time).
 
 ### Experiment 3
-This experiment was by feeding direct differences of frames (and not motion vector adjusted differences)
+This experiment was by feeding direct differences of frames (and not motion vector adjusted differences). The improvement is variable and largely dependent on the motion. For most of the cases, there is an improvement by 1-2 iterations (percentage improvement is variable).
 
 ### Experiment 4(TODO)
 Motion vector adjusted difference (TODO)
