@@ -34,6 +34,7 @@ Performance:
 	- Quality (with msssi quality metric)
 	  (https://ece.uwaterloo.ca/~z70wang/publications/msssim.html)
 
+We take a look at images for 5 iterations:
 
 ### Experiment 2
 This experiment was on the videos, by directly feeding in image samples. We use 5 iterations for simplicity right now (the computations are linear in number of iterations, and take a lot of time).
