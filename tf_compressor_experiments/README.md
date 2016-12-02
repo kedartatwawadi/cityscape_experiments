@@ -36,6 +36,16 @@ Performance:
 
 We take a look at images for 5 iterations:
 
+[[https://github.com/kedartatwawadi/cityscape_experiments/blob/master/tf_compressor_experiments/experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_00.png]]
+
+[[https://github.com/kedartatwawadi/cityscape_experiments/blob/master/tf_compressor_experiments/experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_01.png]]
+
+[[https://github.com/kedartatwawadi/cityscape_experiments/blob/master/tf_compressor_experiments/experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_02.png]]
+
+[[https://github.com/kedartatwawadi/cityscape_experiments/blob/master/tf_compressor_experiments/experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_03.png]]
+
+[[https://github.com/kedartatwawadi/cityscape_experiments/blob/master/tf_compressor_experiments/experiments/stuttgart_00_000000_000002_leftImg8bit.png_dir/image_04.png]]
+
 ### Experiment 2
 This experiment was on the videos, by directly feeding in image samples. We use 5 iterations for simplicity right now (the computations are linear in number of iterations, and take a lot of time).
 
