@@ -64,19 +64,34 @@ Comparison with JPEG (every frame individually)
 ### Experiment 2
 This experiment was on the videos, by directly feeding in image samples. We use 5 iterations for simplicity right now (the computations are linear in number of iterations, and take a lot of time).
 
+I modified the loss function to be L2 ( The aim was eventually to change it to optical flow loss). The training procedure followed was as follows. 
+
+1. Run every image for 15 full iterations
+2. Pick the next 30 frames and repeat the experiment for every frame
+3. Pick a random short snippet of cityscape video of 30 frames and retrain
+
+This training is still for the image compressor, and not for the video. The results were overall  (However, unfair to compare with JPEG, as it does not train for the loss function). 
+
+| Iteration | BPP | Compression Ratio | L2 (relative) | 
+|---: |---: |---: | ---: | 
+|3 | 0.500 | 48:1| 0.989 | 
+|4 | 0.625 | 38.4:1| 0.992 | 
+
+For Optical Flow based loss function, we use DeepFlow2 Optical Flow (http://thoth.inrialpes.fr/src/deepflow/) for the need of easily differentiable/backpropagable iterations. Need some time to do this, as DeepFlow2 (or most of the Optical Flow based implementations) are not implemented in TensorFlow
+
+
+
+
 ### Experiment 3
 This experiment was by feeding direct differences of frames (and not motion vector adjusted differences). The improvement is variable and largely dependent on the motion. For most of the cases, there is an improvement by 1-2 iterations (percentage improvement is variable).
 
-### Experiment 4(TODO)
-Motion vector adjusted difference (TODO)
+I also tried Motion Vector adjusted difference between frames. However, the prediction is per macroblock in x264, and some macroblocks can be non-causal. Thus, directly extracting the predictor part from codecs might not be possible.
 
-### Optical Flow Experiment(TODO)
-Check at what iterations, do optical flow results look good. (Assuming the same loss function for which the network is trained for). 
+### TODO
+1. Analyze if Non-causality significantly improves the compression.
+2. Understand if these modifications can lead to significant video compression
+3. Add a causal motion vector based frame predictor: https://arxiv.org/pdf/1502.04681.pdf
 
-##Challenges
-There are some important constraints, which might take a bit of time to resolve.
 
-1. We would like to train the network with different loss functions. However, the training procedure has not been provided, so that would have to be written from scratch.
-2. Currently, only CPU versions are working so running/implementation takes a bit of time.
 
  
