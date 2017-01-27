@@ -92,10 +92,14 @@ I also tried Motion Vector adjusted difference between frames. However, the pred
 
 2. [Image compression based on deep learning](https://arxiv.org/abs/1608.05001): Offers compression and encryption at the same time. which might be interesting
 
+3. [Causal Motion vector based prediction](https://arxiv.org/pdf/1502.04681.pdf): Motion vector based prediction
+4. [RNN training](https://www.tensorflow.org/tutorials/recurrent/): How to train recurrent neural networks (or LSTM/GRU based networks)
+5. [Video Captioning] (https://arxiv.org/pdf/1502.08029.pdf): USeful for our purpose, as a way to preprocess videos. (However, this is for entire videos, which we wish to have a frame per frame output)
+
 ### TODO
 1. Analyze if Non-causality significantly improves the compression.
 2. Understand if these modifications can lead to significant video compression
-3. Add a causal motion vector based frame predictor: https://arxiv.org/pdf/1502.04681.pdf
+
 
 
 
