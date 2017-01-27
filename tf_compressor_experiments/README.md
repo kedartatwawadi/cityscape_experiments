@@ -87,6 +87,11 @@ This experiment was by feeding direct differences of frames (and not motion vect
 
 I also tried Motion Vector adjusted difference between frames. However, the prediction is per macroblock in x264, and some macroblocks can be non-causal. Thus, directly extracting the predictor part from codecs might not be possible.
 
+### Papers
+1. [Semantic perceptual compression](https://arxiv.org/abs/1612.08712): Modifies JPEG copression, keeping the decoder the same. This is useful in the intermediate run, when you want decoder compatibility. The idea is to figure out semantically salient regions and concentrate on compression of these regions. In our case, it will be figuring out CV-salient regions and concentrating compression effonts there.
+
+2. [Image compression based on deep learning](https://arxiv.org/abs/1608.05001): Offers compression and encryption at the same time. which might be interesting
+
 ### TODO
 1. Analyze if Non-causality significantly improves the compression.
 2. Understand if these modifications can lead to significant video compression
