@@ -11,18 +11,17 @@ Another important motivation this serves it with respect to how well can RNN's l
 
 There has been a lot of work on sequence prediction using RNN's, where the aim is to generate a sequence which resembles a given dataset. For eg: generating shakespeare's plays, etc. 
 
-1. Unreasonable Effectiveness of RNN: 
-2. LSTM based sequence prediction: 
+1. Unreasonable Effectiveness of RNN: http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+2. LSTM based text prediction: http://www.cs.utoronto.ca/~ilya/pubs/2011/LANG-RNN.pdf
 
 There was also some work in early 2000's on lossless compression using neural networks. However, due to Vanilla RNN's not being able to capture long term dependencies well, the models might not have performed as well. Also in the past 5 years, the speeds of neural network have dramatically improved, which is a good thing for NN based probability estimators.
 
 1. Neural Networks based compression: 
-2. Matt Mahoney Implementation: 
+2. Matt Mahoney Implementation: http://mattmahoney.net/dc/nn_paper.html
 
 Also on the theoretical side, there are connections between predictors trained with log-loss and universal compression. Thus, if RNN's can act as good predictors, we should be able to utilize them into good compressors.n
 
-1. On Log Loss:
-2. EE376c Lecture Notes on Prediction: 
+1. EE376c Lecture Notes on Prediction: http://web.stanford.edu/class/ee376c/lecturenotes/Chapter2_CTW.pdf
 
 
 ## TODO
@@ -38,7 +37,7 @@ Wold be interesting to see, if the RNN network is able to figure out such deep c
 
 ## Applications
 
-1. *Improved intuitive understanding* of RNN based structures for compression. The understanding can be used later to make improvements to more complex image/video compressors
-2. *Wide Applications* to generic text/DNA/parameter compression. i.e. wherever arithematic encoding is used.
-3. *Theoretical Connections* with log-loss based predictors, can be understood based on simple linear-RNN networks etc. 
+1. **Improved intuitive understanding** of RNN based structures for compression. The understanding can be used later to make improvements to more complex image/video compressors
+2. **Wide Applications** to generic text/DNA/parameter compression. i.e. wherever arithematic encoding is used.
+3. **Theoretical Connections** with log-loss based predictors, can be understood based on simple linear-RNN networks etc. 
 
