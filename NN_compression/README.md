@@ -16,7 +16,7 @@ There has been a lot of work on sequence prediction using RNN's, where the aim i
 
 There was also some work in early 2000's on lossless compression using neural networks. However, due to Vanilla RNN's not being able to capture long term dependencies well, the models might not have performed as well. Also in the past 5 years, the speeds of neural network have dramatically improved, which is a good thing for NN based probability estimators.
 
-1. Neural Networks based compression: 
+1. Neural Networks based compression: http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=478398
 2. Matt Mahoney Implementation: http://mattmahoney.net/dc/nn_paper.html
 
 Also on the theoretical side, there are connections between predictors trained with log-loss and universal compression. Thus, if RNN's can act as good predictors, we should be able to utilize them into good compressors.n
