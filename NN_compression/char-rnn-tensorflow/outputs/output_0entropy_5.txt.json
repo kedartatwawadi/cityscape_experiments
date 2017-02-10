@@ -1,0 +1,28 @@
+{
+  "grad_clip": 5.0, 
+  "vocab_size": 2, 
+  "last_epoch_loss": 0.0087449962316332886, 
+  "data_type": "0entropy", 
+  "lower_bound": 0, 
+  "learning_rate": 0.002, 
+  "file_size": 10000000, 
+  "num_layers": 2, 
+  "batch_size": 20, 
+  "info_path": "data/sequence_data/info_0entropy_0_iter_20_markovity.txt", 
+  "num_epochs": 50, 
+  "markovity": 20, 
+  "epoch_stopped": 2, 
+  "save_every": 1000, 
+  "init_from": null, 
+  "rnn_size": 128, 
+  "p1": 0.5, 
+  "Entropy": 0, 
+  "summary_dir": ".summary", 
+  "seq_length": 20, 
+  "decay_rate": 0.99, 
+  "data_path": "data/sequence_data/input_0entropy_0_iter_20_markovity.txt", 
+  "save_dir": "save", 
+  "output_path": "outputs/output_0entropy_5.txt", 
+  "model": "lstm"
+}
+ ############################################# 
