@@ -11,16 +11,16 @@ def main():
     data_dir = "data/sequence_data"
     output_dir="outputs"
     # generate and run 0entropy models with default parameters
-    max_k=100
-    num_samples=10000000
-    max_epochs=50
+    max_k=35
+    num_samples=100000000
+    max_epochs=80
     num_iter=2
-    num_layers=2
+    num_layers=4
     p1=0.5
-    output_file = os.path.join(output_dir,"output_0entropy_5.txt")
-    for k in range(19,max_k,10):
+    output_file = os.path.join(output_dir,"output_0entropy_8_popeye.txt")
+    for k in range(19,max_k,2):
         for iter in range(num_iter):
-            print  "Processing for k: ",str(k)
+            print  "Processing for k: ",str(k+1)
             markovity = k+1
             file_name = "input_0entropy_" + str(iter) + "_iter_" + str(markovity) + "_markovity.txt"
             file_name = os.path.join(data_dir,file_name)
@@ -46,6 +46,7 @@ def main():
             for _size in [128,256,512]:
                 summary_dir = ".summary"
                 summary_dir = os.path.join(summary_dir, "size_" + str(_size))
+                summary_dir = os.path.join(summary_dir, "num_layers_" + str(num_layers))
                 summary_dir = os.path.join(summary_dir, "markovity_" + str(k))
                 summary_dir = os.path.join(summary_dir, "run_" + str(iter))
                 arg_string  = " --data_path "   + file_name

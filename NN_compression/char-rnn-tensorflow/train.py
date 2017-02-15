@@ -29,9 +29,9 @@ def get_argument_parser():
                        help='number of layers in the RNN')
     parser.add_argument('--model', type=str, default='lstm',
                        help='rnn, gru, or lstm')
-    parser.add_argument('--batch_size', type=int, default=20,
+    parser.add_argument('--batch_size', type=int, default=50,
                        help='minibatch size')
-    parser.add_argument('--seq_length', type=int, default=20,
+    parser.add_argument('--seq_length', type=int, default=50,
                        help='RNN sequence length')
     parser.add_argument('--num_epochs', type=int, default=50,
                        help='number of epochs')
@@ -39,7 +39,7 @@ def get_argument_parser():
                        help='save frequency')
     parser.add_argument('--grad_clip', type=float, default=5.,
                        help='clip gradients at this value')
-    parser.add_argument('--learning_rate', type=float, default=0.002,
+    parser.add_argument('--learning_rate', type=float, default=0.005,
                        help='learning rate')
     parser.add_argument('--decay_rate', type=float, default=0.99,
                        help='decay rate for rmsprop')                       
@@ -119,7 +119,7 @@ def train(args):
     with tf.Session() as sess:
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver(tf.global_variables())
-        writer = tf.train.SummaryWriter(args.summary_dir,sess.graph)
+        writer = tf.summary.FileWriter(args.summary_dir,sess.graph)
         # restore model
         if args.init_from is not None:
             saver.restore(sess, ckpt.model_checkpoint_path)
@@ -156,11 +156,11 @@ def train(args):
                     print("model saved to {}".format(checkpoint_path))
 
                 if b%10 == 0:
-                    writer.add_summary(summary,b)
+                    writer.add_summary(summary,e*data_loader.num_batches + b)
              
             cumul_loss /= data_loader.num_batches
             print("Epoch {}: Cumulative Loss for the epoch: {:.3f}".format(e,cumul_loss))
-            if (abs(cumul_loss - args.lower_bound) < 0.01):
+            if (abs(cumul_loss - args.lower_bound) < 0.1):
                 print("Stopping Training as we get a good loss.. :) ... ") 
                 break    
 
