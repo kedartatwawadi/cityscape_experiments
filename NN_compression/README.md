@@ -51,7 +51,7 @@ For sequence lengths of 10^7, 10^8 we are able to capture dependence very well f
 However, above that markovity I am finding it difficult to train the network. Also, sometimes the network fails for smaller values of $k$ as well. 
 I am still not sure what the reason is, currently trying some techniques of training. 
 
-![k-training](char-rnn-tensorflow/images/img1.png)
+![k-training](char-rnn-tensorflow/images/img2.png)
 
 
 ### DNA Dataset
@@ -60,7 +60,7 @@ I tried with two real datasets, The first one is the chromosome 1 DNA dataset (c
 ### Hutter prize dataset
 The Hutter prize is a competition for compressing the wikipedia knowledge dataset (100MB) into 16MB or less. Compressors like gzip are able to perform upto 34MB, while more carefully preprocessed LZTurbo, can perform upto 25MB. The best, state of the art compressors, (which incidentally also use neural networks for context mixing) perform close to 15MB. Our basic character-level model performs close to 20MB compression, which again is comparatively good. 
 
-![hutter](char-rnn-tensorflow/images/img2.png)
+![hutter](char-rnn-tensorflow/images/img3.png)
 
 
 The overall observation is that, the neural network is able to compress lower context very easily and pretty well. Capturing higher order contexts needs more careful training, or change in the model which I am still exploring. 
