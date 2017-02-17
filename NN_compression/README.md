@@ -23,6 +23,10 @@ Also on the theoretical side, there are connections between predictors trained w
 
 1. EE376c Lecture Notes on Prediction: http://web.stanford.edu/class/ee376c/lecturenotes/Chapter2_CTW.pdf
 
+Another interesting thing to note (which is recently discovered) is that, RNN based models have been partially used in the state-of-the-art lossless compressors since some time. They have been mainly used only for context mixing. The idea is that, you find the probability of the next symbol based on the context. There can be multiple possible contexts, which we can choose (for eg: in Video Coding, context can be past frame Motion vectors, past key frame, etc. ). Wha context to choose is generally a very important problem. 
+In fact, most of the leading text compressors, on the [Hutter prize](http://prize.hutter1.net/) leaderboard use LSTMs for model mixing. For example, here is the flowchart for the [CMIX](http://www.byronknoll.com/cmix.html). 
+
+![cmix_image](http://www.byronknoll.com/images/architecture.png)
 
 ## TODO
 
