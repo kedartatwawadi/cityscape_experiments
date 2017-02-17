@@ -36,6 +36,7 @@ The plan is to test with sources such as:
 2. k-Markov sources
 3. 0 entropy sources with very high markovity. For example
     X_n = X_{n-20} exor X_{n-40} exor X_{n-60}
+4. Try compressing images: Eg: https://arxiv.org/abs/1601.06759
 
 Wold be interesting to see, if the RNN network is able to figure out such deep correlations. Would be useful to also quantify the amount of state information required to achieve entropy limits with there sources (what RNN models, how many layers). 
 
