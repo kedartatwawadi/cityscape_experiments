@@ -13,11 +13,11 @@ def main():
     # generate and run 0entropy models with default parameters
     max_k=35
     num_samples=100000000
-    max_epochs=10
+    max_epochs=4
     num_iter=2
-    num_layers=4
+    num_layers=3
     p1=0.5
-    output_file = os.path.join(output_dir,"output_0entropy_8_popeye.txt")
+    output_file = os.path.join(output_dir,"output_0entropy_9_popeye.txt")
     for k in range(20,max_k,2):
         for iter in range(num_iter):
             print  "Processing for k: ",str(k+1)
